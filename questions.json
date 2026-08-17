@@ -1,0 +1,36 @@
+[
+  {"category":"Linux","difficulty":"Easy","question":"Which command lists files and directories?","options":["ls","pwd","cd","mkdir"],"answer":1},
+  {"category":"Linux","difficulty":"Easy","question":"Which command displays the current working directory?","options":["where","pwd","cwd","locate"],"answer":2},
+  {"category":"Linux","difficulty":"Medium","question":"Which command changes file permissions?","options":["chmod","chperm","passwd","permit"],"answer":1},
+  {"category":"Linux","difficulty":"Medium","question":"Which command searches for a text pattern inside files?","options":["grep","findtext","scan","search"],"answer":1},
+  {"category":"Linux","difficulty":"Hard","question":"What does chmod 755 file mean?","options":["Owner rwx, group r-x, others r-x","Owner rw-, group r--, others r--","Everyone rwx","Owner r-x, group rwx, others rwx"],"answer":1},
+  {"category":"Linux","difficulty":"Hard","question":"Which signal is commonly used by kill to request graceful termination?","options":["SIGKILL","SIGSTOP","SIGTERM","SIGCONT"],"answer":3},
+
+  {"category":"Python","difficulty":"Easy","question":"Which keyword defines a function in Python?","options":["func","def","function","define"],"answer":2},
+  {"category":"Python","difficulty":"Easy","question":"Which data type stores key-value pairs?","options":["list","tuple","dictionary","set"],"answer":3},
+  {"category":"Python","difficulty":"Medium","question":"Which module is used to work with JSON in Python?","options":["json","xml","data","picklejson"],"answer":1},
+  {"category":"Python","difficulty":"Medium","question":"What does len([10, 20, 30]) return?","options":["2","3","4","30"],"answer":2},
+  {"category":"Python","difficulty":"Hard","question":"What is the result of bool([])?","options":["True","False","None","Error"],"answer":2},
+  {"category":"Python","difficulty":"Hard","question":"Which statement is used to handle exceptions?","options":["try-except","if-error","catch-throw","error-handle"],"answer":1},
+
+  {"category":"Java","difficulty":"Easy","question":"Which keyword is used to create a class in Java?","options":["class","struct","object","define"],"answer":1},
+  {"category":"Java","difficulty":"Easy","question":"Which method is the entry point of a Java application?","options":["start()","run()","main()","init()"],"answer":3},
+  {"category":"Java","difficulty":"Medium","question":"Which feature allows Java code to run on different platforms?","options":["Pointers","JVM","Preprocessor","Macros"],"answer":2},
+  {"category":"Java","difficulty":"Medium","question":"Which keyword prevents a class from being inherited?","options":["static","private","final","const"],"answer":3},
+  {"category":"Java","difficulty":"Hard","question":"Which collection does not allow duplicate elements?","options":["List","Set","Map","ArrayList"],"answer":2},
+  {"category":"Java","difficulty":"Hard","question":"Which exception is checked at compile time?","options":["NullPointerException","ArithmeticException","IOException","ArrayIndexOutOfBoundsException"],"answer":3},
+
+  {"category":"SQL","difficulty":"Easy","question":"Which SQL command retrieves data?","options":["SELECT","GET","FETCHALL","READ"],"answer":1},
+  {"category":"SQL","difficulty":"Easy","question":"Which clause filters rows?","options":["ORDER BY","WHERE","GROUP BY","SORT"],"answer":2},
+  {"category":"SQL","difficulty":"Medium","question":"Which command adds a new row to a table?","options":["INSERT","ADD","CREATE ROW","APPEND"],"answer":1},
+  {"category":"SQL","difficulty":"Medium","question":"Which key uniquely identifies each row?","options":["Foreign key","Primary key","Candidate label","Index key"],"answer":2},
+  {"category":"SQL","difficulty":"Hard","question":"Which JOIN returns rows that have matching values in both tables?","options":["INNER JOIN","FULL JOIN","CROSS JOIN","LEFT ONLY"],"answer":1},
+  {"category":"SQL","difficulty":"Hard","question":"Which clause is used to filter grouped results?","options":["WHERE","HAVING","GROUP FILTER","ORDER"],"answer":2},
+
+  {"category":"General IT","difficulty":"Easy","question":"What does CPU stand for?","options":["Central Processing Unit","Computer Primary Utility","Central Program User","Core Processing Utility"],"answer":1},
+  {"category":"General IT","difficulty":"Easy","question":"Which device forwards packets between networks?","options":["Switch","Router","Monitor","Keyboard"],"answer":2},
+  {"category":"General IT","difficulty":"Medium","question":"Which protocol is commonly used for secure web browsing?","options":["HTTP","FTP","HTTPS","SMTP"],"answer":3},
+  {"category":"General IT","difficulty":"Medium","question":"What does RAM provide to a running program?","options":["Permanent storage","Temporary working memory","Internet access","Power supply"],"answer":2},
+  {"category":"General IT","difficulty":"Hard","question":"Which data structure follows FIFO order?","options":["Stack","Queue","Tree","Graph"],"answer":2},
+  {"category":"General IT","difficulty":"Hard","question":"What does DNS primarily translate?","options":["Domain names to IP addresses","IP addresses to MAC addresses","Files to folders","HTTP to HTTPS"],"answer":1}
+]
