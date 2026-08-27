@@ -1,139 +1,124 @@
-# Quiczy – Linux Quiz Application
+# ✦ Quiczy — PHP IT Quiz Application
 
 **Student:** Rashi Sawardekar  
 **Class:** TYIT – B  
 **Roll No.:** 31010924093
 
-## About the Project
+## About
 
-Quiczy is a beginner-friendly command-line quiz application built with **Python 3 for Linux**. It demonstrates Python functions, JSON file handling, randomization, timed input, Linux commands, Bash scripting and file permissions.
+Quiczy is a PHP-based quiz web application for Linux/WSL. It keeps the original quiz requirements:
 
-## Features
-
-- Player name input
-- Main menu: Start Quiz, Leaderboard, Exit
+- Player name
 - Categories: Linux, Python, Java, SQL, General IT, All
 - Difficulties: Easy, Medium, Hard, All
-- Four-option multiple-choice questions
-- 15-second timer per question
-- Automatically advances when time expires
-- Correct/incorrect feedback and correct answer display
-- 10 random questions per quiz when enough matching questions exist
-- Final score and percentage screen
-- Scores saved to `scores.json`
+- Four-option MCQs
+- 15-second timer
+- Automatic timeout
+- Correct/incorrect feedback
+- Up to 10 random questions
+- Score and percentage
+- JSON score storage
 - Top 10 leaderboard
-- Questions stored separately in `questions.json`
-- Linux launcher script: `run_quiz.sh`
+
+The original question bank is stored in `questions.json`.
+
+## Technology
+
+- PHP
+- HTML5
+- CSS3
+- JavaScript
+- JSON
+- Linux / WSL
+
+No database or external PHP package is required.
 
 ## Project Structure
 
 ```text
 Quiczy/
-├── main.py
+├── index.php
+├── quiz.php
+├── feedback.php
+├── result.php
+├── leaderboard.php
+├── style.css
 ├── questions.json
 ├── scores.json
+├── main.py
 ├── run_quiz.sh
-├── README.md
-└── screenshots/
+└── README.md
 ```
 
-## Requirements
+For the PHP submission, the important files are the `.php`, `style.css`, `questions.json` and `scores.json` files.
 
-- Linux/Unix terminal
-- Python 3
-- No external Python packages are required
+## Run on WSL
 
-The application uses only standard modules requested for the project:
-
-- `json`
-- `os`
-- `random`
-- `signal`
-- `time`
-
-## How to Run on Linux
-
-Open a terminal and move into the project directory:
+From WSL:
 
 ```bash
-cd Quiczy
+cd /mnt/c/Users/Rashi/Downloads/Quiczy
+php -v
+php -S localhost:8000
 ```
 
-Make the launcher executable:
+Open Windows Chrome:
+
+```text
+http://localhost:8000
+```
+
+Stop the server with:
+
+```text
+Ctrl + C
+```
+
+## Linux Commands Demonstrated
 
 ```bash
-chmod +x run_quiz.sh
+cd
+ls
+chmod
+php
 ```
 
-Run the application:
-
-```bash
-./run_quiz.sh
-```
-
-You can also run it directly with:
-
-```bash
-python3 main.py
-```
+The application itself can be served directly from the Linux/WSL terminal.
 
 ## How It Works
 
-1. `main.py` loads questions from `questions.json`.
-2. The player enters their name.
-3. The main menu is displayed.
-4. The player selects a category and difficulty.
-5. Matching questions are filtered and shuffled using Python's `random` module.
-6. Each question has four options and a 15-second time limit.
-7. Linux `SIGALRM`/`signal` is used to interrupt input when the timer expires.
-8. The score is calculated and stored in `scores.json`.
-9. The leaderboard sorts saved results by percentage and score and displays the top 10.
-
-## Adding New Questions
-
-Open `questions.json` and add another object using the same format:
-
-```json
-{
-  "category": "Python",
-  "difficulty": "Easy",
-  "question": "Your question here?",
-  "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
-  "answer": 2
-}
-```
-
-The `answer` value is the correct option number from **1 to 4**.
+1. `index.php` loads the question bank and lets the player choose a category and difficulty.
+2. PHP filters and shuffles matching questions.
+3. The quiz stores the selected questions and score in a PHP session.
+4. `quiz.php` displays one question at a time.
+5. JavaScript counts down from 15 seconds.
+6. PHP checks the submitted answer.
+7. `feedback.php` shows correct/incorrect feedback.
+8. `result.php` calculates the final percentage and saves the result to `scores.json`.
+9. `leaderboard.php` sorts results by percentage and score and displays the top 10.
 
 ## Viva Points
 
+### Why PHP?
+
+PHP provides server-side processing for the quiz, answer validation, session management and score storage.
+
 ### Why JSON?
-JSON is lightweight, human-readable and easy to edit, so questions and scores can be changed without modifying the Python program.
 
-### Why Bash?
-The Bash script provides a simple Linux launcher and demonstrates shell scripting and file permissions.
+JSON is lightweight, human-readable and easy to edit. It stores the question bank and saved scores without requiring a database.
 
-### Why `signal`?
-Linux/Unix signals allow the program to interrupt `input()` after 15 seconds and automatically continue to the next question.
+### Why JavaScript?
 
-### Why `random`?
-It prevents the same fixed question order from appearing every time and makes the quiz more engaging.
+JavaScript provides the client-side 15-second countdown and automatically submits the quiz when time expires.
 
-### Why functions?
-Functions divide the application into small reusable modules such as loading data, selecting filters, asking questions and displaying the leaderboard.
+### Why Sessions?
 
-## Important Linux Commands Used
+PHP sessions keep the current player, selected quiz questions, current question number and score between pages.
 
-```bash
-chmod +x run_quiz.sh
-./run_quiz.sh
-python3 main.py
-clear
-```
+### Why CSS?
 
-## Notes
+CSS creates the graphical user interface with responsive cards, buttons, progress bars, timer styling and leaderboard design.
 
-- The timer uses Unix/Linux `SIGALRM`, so Quiczy is intended to run in a Linux/Unix terminal.
-- `scores.json` starts empty and is populated after completed quizzes.
-- If fewer than 10 questions match a selected category/difficulty, Quiczy uses all available matching questions and reports the number used.
-"# quiczy" 
+## Important Note
+
+The PHP version is the submission version. The older Python files remain in the folder as the earlier prototype, but they are not required to run the PHP application.

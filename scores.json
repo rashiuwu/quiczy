@@ -3,7 +3,7 @@
         "name": "rashi",
         "score": 1,
         "total": 2,
-        "percentage": 50.0,
+        "percentage": 50,
         "category": "General IT",
         "difficulty": "Easy",
         "date": "2026-08-17 22:39:54"
@@ -12,9 +12,18 @@
         "name": "khushi",
         "score": 6,
         "total": 10,
-        "percentage": 60.0,
+        "percentage": 60,
         "category": "All",
         "difficulty": "Easy",
         "date": "2026-08-17 22:43:10"
+    },
+    {
+        "name": "Rashi",
+        "score": 2,
+        "total": 2,
+        "percentage": 100,
+        "category": "Linux",
+        "difficulty": "Easy",
+        "date": "2026-08-24 00:14:45"
     }
 ]
